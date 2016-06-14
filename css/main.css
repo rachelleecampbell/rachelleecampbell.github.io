@@ -1,0 +1,512 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,400italic,700,700italic);
+/*-------------  Global Style -------------*/
+
+* { box-sizing: border-box; }
+
+html {
+  height: 100%;
+}
+
+body {
+  color: black;
+  background-color: white;
+  font-family: 'Abel', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+h3 {
+  font-size: 3.5em;
+}
+
+
+ul {
+  list-style: none;
+}
+
+/*-------------  Navigation Style -------------*/
+
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.navbar-brand {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.navbar-toggle {
+  z-index: 3;
+}
+
+.navbar-default .navbar-brand {
+  color: #333;
+  font-family: 'Abel', sans-serif;
+  font-size: 3em;
+}
+
+.navbar-left {
+  float: left!important;
+  padding-left: 15%;
+}
+
+.navbar-right {
+  padding-right: 15%;
+}
+
+.nav>li {
+  font-family: 'Abel', sans-serif;
+  font-size: 1.5em;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #333;
+}
+
+.navbar-default .navbar-nav>li>a:after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 100%;
+  background: transparent;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.navbar-default .navbar-nav>li>a:hover:after {
+  height: 1.5px;
+  background: #333;
+}
+
+.navbar li {
+  position: relative;
+  cursor: pointer;
+  width: auto;
+  margin-left: 5px;
+  height: 41px;
+  padding: 0 8px;
+
+}
+
+/*-------------  Navigation -- Mobile Style -------------*/
+
+
+
+.menu-collapsed {
+  transition: all .25s;
+  position: fixed;
+  top: 10px;
+  left: 9px;
+  height: 36px;
+  width: 36px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.menu-collapsed ul {
+  transition: all .05s;
+  position: fixed;
+  left: -9000px;
+}
+
+.bar {
+  position: fixed;
+  right: 12px;
+  top: 24px;
+  height: 5px;
+  width: 35px;
+  border-radius: 0px;
+  background-color: black;
+}
+
+.bar:before {
+  transition: all .25s;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -8px;
+  height: 5px;
+  width: 35px;
+  border-radius: 0px;
+  background-color: black;
+}
+
+.bar:after {
+  transition: all .25s;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  height: 5px;
+  width: 35px;
+  border-radius: 0px;
+  background-color: black;
+}
+
+.menu-expanded {
+  transition: all .25s;
+  text-align: center;
+  line-height: 100px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  top: 0;
+  left: 0;
+  background-color: #3cdbbf;
+}
+
+.menu-expanded ul {
+  transition: all .05s;
+  position: relative;
+  left: 0;
+  z-index: 2;
+  list-style-type: none;
+}
+
+.menu-expanded a {
+  transition: all .15s;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  font-family: 'Abel', sans-serif;
+  padding: 5px;
+}
+
+.menu-expanded a:hover {
+  transition: all .15s;
+  letter-spacing: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.menu-expanded .bar {
+  background-color: transparent;
+  transition: all .25s;
+}
+
+.menu-expanded .bar:before {
+  transition: all .25s;
+  content: "";
+  transform: rotate(45deg);
+  top: -0px;
+  background-color: white;
+}
+
+.menu-expanded .bar:after {
+  transition: all .25s;
+  content: "";
+  transform: rotate(-45deg);
+  top: 0px;
+  background-color: white;
+}
+
+.menu-collapsed {
+  display: none;
+}
+
+@media screen and (max-width: 765px) {
+  .menu-collapsed {
+    display: inherit!important;
+  }
+}
+
+.main_content {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+
+/*-------------  My Work Style -------------*/
+
+/* ---- grid ---- */
+
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+  padding: 0 10px 10px 0;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+  opacity:0.5;
+}
+
+
+
+
+.project_container_text {
+  padding-bottom: .5em;
+  float: left;
+  padding: 1em;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  width: 100%;
+  transition: opacity .3s ease;
+}
+
+.project_container_text:hover {
+  opacity: 1;
+}
+
+.project_container_text {
+  opacity: 0;
+}
+
+/*-------------  About Me Style -------------*/
+
+.about.me {
+  padding: 7%;
+}
+
+ul.about.links {
+  padding: 0;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 1.875rem;
+  line-height: 1.75em;
+  display: inline;
+  list-style: none;
+}
+
+ul.about.links a {
+  text-decoration: none;
+  white-space: nowrap;
+  color: #3cdbbf;
+  border-bottom: 1px solid #3cdbbf;
+  transition: color .3s ease,border-color .3s ease;
+}
+
+ul.about.links a:hover {
+  text-decoration: none;
+  white-space: nowrap;
+  color: #36c5ab;
+  border-bottom: 1px solid #36c5ab;
+  transition: color .3s ease,border-color .3s ease;
+}
+/*-------------  Jumbo Image Style -------------*/
+
+
+
+/*-------------  Services Style -------------*/
+
+.contain {
+  max-width: 76em;
+  padding: 0 1.5em;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+.services ul {
+  border-top: 1px solid #3cdbbf;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services ul li {
+  width: 50%;
+  border-top: none;
+  border-right: 1px solid #3cdbbf;
+  position: relative;
+  padding: 10% 7%;
+  display: block;
+}
+
+.services ul li:last-child {
+    border-right: none;
+}
+
+.services ul li .content {
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.services ul li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+p.categories, time {
+  font-family: FFDINWeb;
+  color: #2e3c40;
+  font-size: .75em;
+}
+
+.services ul li h3 {
+  line-height: 1em;
+}
+
+.services ul li h6 {
+  margin-bottom: 0;
+}
+
+.services ul li .content:hover {
+  -webkit-transform: translateX(.25em);
+  transform: translateX(.25em);
+}
+/*-------------  Footer Style -------------*/
+
+
+footer {
+  position: relative;
+  z-index: 0;
+  height: 30em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #3cdbbf;
+  padding: 1em;
+  padding-top: 0;
+  border: 0 solid #fff;
+  border-top: 0;
+  transition: border .3s ease,padding .3s ease;
+}
+
+footer .footer_link {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+footer .footer_content {
+  position: fixed;
+  z-index: 1;
+  bottom: 13em;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  transition: bottom .3s ease;
+}
+
+footer .footer_content h2 {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 3em;
+  padding: 0 2rem;
+}
+
+footer .footer_content h2>span span {
+  position: relative;
+  top: -.3em;
+  white-space: nowrap;
+  text-transform: none;
+  font-size: .7em;
+  font-family: FreightDispProMedium-Italic;
+  border-bottom: 1px solid #fff;
+}
+
+footer .contain {
+  position: absolute;
+  color: white;
+}
+
+footer .footer_secondary {
+  z-index: 3;
+  bottom: 1.5em;
+  width: 100%;
+  bottom: 30px;
+  position: absolute;
+  padding: 0 2em 0 2em;
+  font-size: 1.5em;
+}
+
+footer .footer_secondary .contain {
+  padding: 0;
+}
+
+footer .footer_secondary .footer_info {
+  padding-left: 2em;
+  float: left;
+}
+
+footer .footer_secondary .footer_social {
+  padding-right: 2em;
+  float: right;
+}
+
+footer .footer_secondary ul li a {
+  color: rgba(255,255,255,.6);
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+footer .footer_secondary ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.75em;
+  font-family: Sailec-Regular;
+  text-align: center;
+}
+
+footer .footer_secondary ul li {
+  display: inline;
+  font-size: .6875em;
+  padding: 0;
+  color: rgba(255,255,255,.6);
+}
+
+
+ul.left {
+    float: left;
+    left: 5%;
+}
+
+ul.right {
+    float: right;
+}
+
+
+
+footer:hover {
+  padding: 0;
+  padding-top: 0;
+  border: 1em solid #fff;
+  border-top: 0;
+}
