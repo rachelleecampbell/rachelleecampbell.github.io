@@ -279,41 +279,10 @@ ul {
 /*-------------  My Work Style -------------*/
 
 
-
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-
-
 .portfolio_list img {
-  display: block;
-  width: 100%;
   opacity:0.5;
 }
 
-
-@media screen and (min-width:850px) {
-  .portfolio_list img {
-    width:100%;
-  }
-}
-
-
-@media screen and (max-width:800px) {
-  .portfolio_list img {
-    width:50%;
-  } 
-}
-
-@media screen and (max-width:400px) {
-  .portfolio_list img {
-    width:100%;
-  }
-}
 
 .portfolio_list {
     overflow: hidden;
@@ -321,7 +290,7 @@ ul {
 
 .portfolio_list li {
     float: left;
-    width: 49.5%;
+
     margin-bottom: 1%;
 }
 
