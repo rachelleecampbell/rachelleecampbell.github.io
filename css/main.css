@@ -155,6 +155,18 @@ ul {
   background-color: black;
 }
 
+.bar:hover {
+    background-color: #36c5ab;
+}
+
+.bar:hover:after {
+    background-color: #36c5ab;
+}
+
+.bar:hover:before {
+    background-color: #36c5ab;
+}
+
 .menu-expanded {
   transition: all .25s;
   text-align: center;
@@ -418,6 +430,14 @@ p.categories, time {
   -webkit-transform: translateX(.25em);
   transform: translateX(.25em);
 }
+
+@media screen and (max-width : 630px) {
+    .content h3 {
+        font-size: 2em;
+    }
+}
+
+
 /*-------------  Footer Style -------------*/
 
 
