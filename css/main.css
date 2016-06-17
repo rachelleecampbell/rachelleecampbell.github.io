@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Abel);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,400italic,700,700italic);
-/*-------------  Global Style -------------*/
+/*-------------  General Style -------------*/
+
 
 * { box-sizing: border-box; }
 
@@ -277,7 +278,6 @@ ul {
 
 /*-------------  My Work Style -------------*/
 
-/* ---- grid ---- */
 
 
 /* clear fix */
@@ -287,46 +287,76 @@ ul {
   clear: both;
 }
 
-/* ---- .grid-item ---- */
 
-.grid-sizer,
-.grid-item {
-  width: 33.333%;
-}
 
-.grid-item {
-  float: left;
-  padding: 0 10px 10px 0;
-}
-
-.grid-item img {
+.portfolio_list img {
   display: block;
   width: 100%;
   opacity:0.5;
 }
 
 
-
-
-.project_container_text {
-  padding-bottom: .5em;
-  float: left;
-  padding: 1em;
-  width: 100%;
-  background: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 1em;
-  width: 100%;
-  transition: opacity .3s ease;
+@media screen and (min-width:850px) {
+  .portfolio_list img {
+    width:100%;
+  }
 }
 
-.project_container_text:hover {
+
+@media screen and (max-width:800px) {
+  .portfolio_list img {
+    width:50%;
+  } 
+}
+
+@media screen and (max-width:400px) {
+  .portfolio_list img {
+    width:100%;
+  }
+}
+
+.portfolio_list {
+    overflow: hidden;
+}
+
+.portfolio_list li {
+    float: left;
+    width: 49.5%;
+    margin-bottom: 1%;
+}
+
+.portfolio_list li {
+    position: relative;
+    padding: 0;
+    margin-bottom: 2%;
+}
+
+.portfolio_list li .info_contain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    width: 100%;
+    transition: opacity .3s ease;
+    z-index: 1000;
+}
+
+.portfolio_list li .project_info {
+    padding-bottom: .5em;
+}
+
+.portfolio_list li .project_info {
+    float: left;
+    background: rgba(255,255,255,.8);
+    padding: 1em;
+    width: 100%;
+}
+
+.info_contain:hover {
   opacity: 1;
 }
 
-.project_container_text {
+.info_contain {
   opacity: 0;
 }
 
