@@ -5,15 +5,17 @@
 
 * { box-sizing: border-box; }
 
-html {
-  height: 100%;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    color: black;
+    background-color: white;
+    font-family: 'Abel', sans-serif;
 }
 
-body {
-  color: black;
-  background-color: white;
-  font-family: 'Abel', sans-serif;
-}
 
 img {
   width: 100%;
@@ -230,7 +232,7 @@ ul {
 
 @media screen and (max-width: 935px) {
     .menu-collapsed {
-    display: inherit!important;
+        display: inherit!important;
     }
     .navbar-header {
         float: none;
@@ -278,6 +280,9 @@ ul {
 
 /*-------------  My Work Style -------------*/
 
+ul.portfolio_list {
+    padding: 0px;
+}
 
 .portfolio_list img {
   opacity:0.5;
@@ -327,6 +332,8 @@ ul {
 .info_contain {
   opacity: 0;
 }
+
+
 
 /*-------------  About Me Style -------------*/
 
@@ -562,3 +569,19 @@ footer:hover {
   border: 1em solid #fff;
   border-top: 0;
 }
+
+@media screen and (max-width 500px) {
+    footer.footer_secondary ul li {
+        font-size: .5em;
+    }
+
+ul.right {
+    float: center;
+}
+
+}
+
+
+
+
+
